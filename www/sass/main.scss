@@ -1,0 +1,616 @@
+/** Reset default styles **/
+
+@import "compass";
+@import "compass/reset";
+/** Add fonts **/
+
+@mixin font-face($style-name,
+$file,
+$folder) {
+    $filepath: "../fonts/" + $folder + "/" + $file;
+    @font-face {
+        font-family: "#{$style-name}";
+        src: url($filepath + ".eot");
+        src: url($filepath + ".eot?#iefix") format('embedded-opentype'), url($filepath + ".woff") format('woff'), url($filepath + ".ttf") format('truetype'), url($filepath + ".svg#" + $style-name + "") format('svg');
+        font-weight: normal;
+    }
+}
+
+@include font-face("PTsans",
+"pt_sans_regular",
+"PTsans");
+/** General styles **/
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    font-family: 'PTsans', Arial, sans-serif;
+}
+
+.clearfix {
+    *zoom: 1;
+    &:before, &:after {
+        display: table;
+        line-height: 0;
+        content: "";
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 1px solid #000;
+    display: inline;
+    padding: 3px 38px;
+}
+
+.medal-hero {
+    font-size: 7px;
+    padding: 30px 0 0 60px;
+    width: 60px;
+    position: relative;
+    text-align: left;
+    font-weight: bold;
+    line-height: 10px;
+    .icon {
+        position: absolute;
+        width: 46px;
+        height: 56px;
+        top: 7px;
+        left: 7px;
+        background: url(../img/sprite-main.png) -160px -76px;
+    }
+}
+
+.order {
+    width: 58px;
+    height: 64px;
+    background: url(../img/sprite-main.png) -207px -76px;
+}
+
+.three-orders {
+    width: 172px;
+    height: 63px;
+    background: url(../img/sprite-main.png) -267px -76px;
+}
+
+.text-stars {
+    position: relative;
+    height: 24px;
+    .icon {
+        background: url(../img/sprite-main.png) -213px -32px;
+        width: 38px;
+        height: 7px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin: -3px 0 0 -19px;
+    }
+}
+
+.popup-big {
+    position: absolute;
+    width: 825px;
+    top: 150px;
+    padding-top: 21px;
+    z-index: 6;
+    background: red;
+    margin-left: -412px;
+    left: 50%;
+    border-top: 10px solid #f2aa00;
+    background: #f6f6f6;
+    @include box-shadow(10px 10px 31px rgba(0, 0, 0, 0.2));
+    behavior: url(/pie/PIE.php);
+    .close-big {
+        width: 19px;
+        height: 18px;
+        position: absolute;
+        top: 19px;
+        right: 22px;
+        background: url(../img/sprite-main.png) -140px -76px;
+        cursor: pointer;
+        overflow: hidden;
+        &:hover {
+            background: url(../img/sprite-main.png) -121px -76px;
+        }
+    }
+    .body {
+        position: relative;
+        &.plant {
+            text-align: center;
+            padding-bottom: 20px;
+            .decoration {
+                position: absolute;
+                &.one {
+                    left: 201px;
+                    top: 63px;
+                    width: 72px;
+                    z-index: 1;
+                    height: 15px;
+                    background: url(../img/sprite-main.png) 0px -49px;
+                }
+                &.two {
+                    left: 218px;
+                    bottom: 132px;
+                    width: 119px;
+                    height: 48px;
+                    background: url(../img/sprite-main.png) 0px -76px;
+                }
+            }
+            .left {
+                width: 205px;
+                float: left;
+                margin: 30px 13px 0 47px;
+                font-size: 14px;
+                line-height: 17px;
+                .text-arrow {
+                    height: 13px;
+                    width: 10px;
+                    margin: 12px auto 4px;
+                    background: url(../img/sprite-main.png) -111px -32px;
+                    overflow: hidden;
+                }
+                h4 {
+                    font-weight: bold;
+                    color: #ff8b00;
+                }
+                .two-circles {
+                    background: url(../img/sprite-main.png) -122px -32px;
+                    overflow: hidden;
+                    width: 62px;
+                    height: 35px;
+                    margin: 13px auto 7px;
+                }
+                .article {
+                    font-size: 12px;
+                    color: #F58A1F;
+                    font-style: italic;
+                    line-height: 14px;
+                    .bold {
+                        font-weight: bold;
+                    }
+                }
+            }
+            .center {
+                width: 320px;
+                float: left;
+                margin-top: 32px;
+                position: relative;
+                img {
+                    margin-bottom: 36px;
+                }
+                h4 {
+                    font-size: 14px;
+                    line-height: 16px;
+                    font-weight: bold;
+                }
+                ul {
+                    font-size: 14px;
+                    margin-top: 2px;
+                    line-height: 16px;
+                    span {
+                        color: #ff8019;
+                    }
+                }
+                .evacuation {
+                    position: absolute;
+                    width: 60px;
+                    padding: 8px 0 0 40px;
+                    top: 200px;
+                    font-size: 12px;
+                    text-align: left;
+                    font-style: italic;
+                    line-height: 13px;
+                    left: 301px;
+                    border-top: 4px solid #ff8b00;
+                }
+            }
+            .right {
+                width: 169px;
+                float: left;
+                margin: 32px 0 0 26px;
+                font-size: 13px;
+                line-height: 17px;
+                .target {
+                    width: 28px;
+                    height: 43px;
+                    background: url(../img/sprite-main.png) -185px -32px;
+                    overflow: hidden;
+                    margin: 0 auto 10px;
+                }
+                .statistics {
+                    margin-top: 96px;
+                    color: #231F20;
+                    font-size: 14px;
+                    .lost {
+                        margin-top: 20px;
+                        span {
+                            color: #868786;
+                        }
+                    }
+                    span {
+                        font-weight: bold;
+                        font-size: 36px;
+                        display: block;
+                        margin-bottom: 5px;
+                        margin-bottom: 11px;
+                    }
+                }
+            }
+        }
+        &.mine {
+            padding: 34px 0 20px;
+            .left {
+                width: 218px;
+                float: left;
+                font-size: 14px;
+                line-height: 17px;
+                margin-left: 23px;
+                p {
+                    margin-bottom: 17px;
+                    span {
+                        color: #ff8b00;
+                        font-weight: bold;
+                    }
+                }
+            }
+            .right {
+                width: 477px;
+                float: right;
+                margin-right: 80px;
+                img {
+                    display: block;
+                }
+            }
+            .recovery {
+                position: absolute;
+                width: 125px;
+                padding: 8px 66px 0 0px;
+                top: 305px;
+                font-size: 12px;
+                text-align: left;
+                font-style: italic;
+                line-height: 14px;
+                left: 133px;
+                border-top: 4px solid #ff8b00;
+            }
+        }
+    }
+}
+
+.page {
+    margin: 0 auto;
+    width: 980px;
+    .yellow {
+        border-top: 10px solid #ffaf00;
+    }
+    header {
+        border-top: 4px solid #000;
+        padding: 12px 0 0;
+        .logo {
+            display: block;
+            width: 472px;
+            margin: 0 auto;
+            font-size: 44px;
+            text-decoration: none;
+            line-height: 58px;
+            font-weight: bold;
+            color: #ff8b00;
+            text-transform: uppercase;
+            span {
+                color: #1f191a;
+            }
+        }
+    }
+    nav {
+        display: block;
+        margin: 14px auto 0;
+        width: 890px;
+        .item {
+            padding: 7px 42px 9px;
+            float: left;
+            border-left: 1px solid #000;
+            text-align: center;
+            width: 210px;
+            text-decoration: underline;
+            font-size: 14px;
+            text-transform: uppercase;
+            cursor: pointer;
+            font-weight: bold;
+            &.first {
+                border: none;
+                text-align: right;
+            }
+            &.last {
+                text-align: left;
+            }
+            &.hovered {
+                color: #F58A1F;
+            }
+            &.active {
+                color: #F58A1F;
+                text-decoration: none;
+                cursor: default;
+            }
+        }
+    }
+    .map {
+        border-top: 3px solid #ff8b00;
+        position: relative;
+        height: 253px;
+        background: url(../img/map-bg.jpg) no-repeat;
+        border-bottom: 2px solid #7f7f7f;
+        margin-bottom: 21px;
+        .item {
+            position: absolute;
+            line-height: 0;
+            &.position1 {
+                top: 9px;
+                left: 252px;
+                .popup-title {
+                    width: 94px;
+                    background: url(../img/sprite-main.png) 0 0;
+                    &.hovered {
+                        background: url(../img/sprite-main.png) -94px 0;
+                        width: 95px;
+                    }
+                    &.active {
+                        background: url(../img/sprite-main.png) -189px 0;
+                        width: 95px;
+                    }
+                }
+            }
+            &.position2 {
+                top: 78px;
+                left: 88px;
+                .popup-title {
+                    background: url(../img/sprite-main.png) -1px -16px;
+                    width: 43px;
+                    &.hovered {
+                        background: url(../img/sprite-main.png) -43px -16px;
+                    }
+                    &.active {
+                        background: url(../img/sprite-main.png) -86px -16px;
+                    }
+                }
+            }
+            &.position3 {
+                top: 105px;
+                left: 527px;
+                .popup-title {
+                    background: url(../img/sprite-main.png) -129px -16px;
+                    width: 88px;
+                    &.hovered {
+                        background: url(../img/sprite-main.png) -306px -16px;
+                    }
+                    &.active {
+                        background: url(../img/sprite-main.png) -217px -16px;
+                    }
+                }
+            }
+            &.position4 {
+                bottom: 10px;
+                right: 10px;
+                .popup-title {
+                    width: 63px;
+                    background: url(../img/sprite-main.png) -285px 0;
+                    &.hovered {
+                        background: url(../img/sprite-main.png) -412px 0;
+                    }
+                    &.active {
+                        background: url(../img/sprite-main.png) -348px 0;
+                    }
+                }
+            }
+            &.position5 {
+                bottom: 85px;
+                left: 72px;
+                .popup-title {
+                    width: 107px;
+                    background: url(../img/sprite-main.png) -394px -16px;
+                    &.hovered {
+                        background: url(../img/sprite-main.png) -502px -16px;
+                    }
+                }
+            }
+            &.position6 {
+                bottom: 66px;
+                left: 62px;
+                .popup-title {
+                    width: 76px;
+                    background: url(../img/sprite-main.png) -475px 0;
+                    &.hovered {
+                        background: url(../img/sprite-main.png) -552px 0;
+                    }
+                }
+            }
+            .popup-title {
+                float: left;
+                cursor: pointer;
+                overflow: hidden;
+                height: 15px;
+                position: relative;
+                z-index: 3;
+                img {
+                    visibility: hidden;
+                    display: block;
+                }
+            }
+            .popup {
+                background: #F5F6F6;
+                position: absolute;
+                padding: 10px 15px;
+                text-align: center;
+                font-size: 12px;
+                display: none;
+                line-height: 14px;
+                @include box-shadow(2px 2px 25px rgba(202, 202, 202, 1));
+                @include border-radius(4px);
+                behavior: url(/pie/PIE.php);
+                .angle {
+                    position: absolute;
+                    overflow: hidden;
+                }
+                .text-circle {
+                    height: 15px;
+                }
+                span {
+                    color: #ff8c00;
+                    a {
+                        display: block;
+                        color: #ff8c00;
+                        margin-bottom: 5px;
+                        font-size: 14px;
+                    }
+                }
+                .close {
+                    position: absolute;
+                    right: -4px;
+                    top: -5px;
+                    cursor: pointer;
+                    width: 15px;
+                    height: 15px;
+                    background: url(../img/sprite-main.png) 0 -32px;
+                    @include border-radius(50%);
+                    behavior: url(/pie/PIE.php);
+                    &.hovered {
+                        background: url(../img/sprite-main.png) -16px -32px;
+                    }
+                }
+                &.stand1 {
+                    width: 92px;
+                    top: -4px;
+                    left: 112px;
+                    .angle {
+                        width: 20px;
+                        height: 9px;
+                        background: url(../img/sprite-main.png) -69px -32px;
+                        left: -20px;
+                        top: 8px;
+                    }
+                }
+                &.stand2 {
+                    width: 157px;
+                    top: -44px;
+                    left: 70px;
+                    .angle {
+                        width: 35px;
+                        height: 10px;
+                        background: url(../img/sprite-main.png) -33px -32px;
+                        left: -35px;
+                        top: 46px;
+                    }
+                }
+                &.stand3 {
+                    width: 152px;
+                    top: 28px;
+                    left: -84px;
+                    padding: 6px 15px;
+                    .angle {
+                        width: 10px;
+                        height: 20px;
+                        background: url(../img/sprite-main.png) -89px -32px;
+                        left: 87px;
+                        top: -20px;
+                    }
+                }
+                &.stand4 {
+                    width: 112px;
+                    bottom: 45px;
+                    right: -20px;
+                    .angle {
+                        width: 11px;
+                        height: 39px;
+                        background: url(../img/sprite-main.png) -99px -32px;
+                        left: 60px;
+                        bottom: -39px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.footer-wrap {
+    background: #ffaf00;
+    min-width: 980px;
+    padding: 8px 0;
+    border-bottom: 5px solid #000;
+    .footer {
+        margin: 0 auto;
+        width: 936px;
+        _width: 980px;
+        padding: 0 22px;
+        .bold {
+            font-weight: bold;
+        }
+        .left,
+        .right {
+            width: 455px;
+            .title {
+                font-size: 14px;
+                margin-bottom: 10px;
+                font-weight: bold;
+            }
+            .line {
+                height: 3px;
+                background: #ffaf00;
+                border-top: 2px solid #231F20;
+                border-bottom: 1px solid #231F20;
+            }
+            .item {
+                float: left;
+                margin-left: 25px;
+                text-align: center;
+                font-size: 10px;
+                line-height: 12px;
+                &.first {
+                    margin-left: 0;
+                }
+            }
+        }
+        .left {
+            float: left;
+            .medal-hero {
+                margin: 10px 0 15px 38px;
+            }
+            .order {
+                margin: 13px 0 8px 40px;
+            }
+            .item {
+                width: 135px;
+            }
+        }
+        .right {
+            float: right;
+            .medal-hero {
+                margin: 10px 0 15px 71px;
+            }
+            .item {
+                width: 215px;
+            }
+            .three-orders {
+                margin: 13px 0 9px 24px;
+            }
+        }
+        .bottom-text {
+            float: left;
+            width: 300px;
+            clear: both;
+            text-align: left;
+            margin-top: 28px;
+            font-style: italic;
+            font-size: 10px;
+            color: #242021;
+        }
+    }
+}
