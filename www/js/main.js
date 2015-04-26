@@ -26,6 +26,18 @@ $(document).ready(function () {
         }
     });
 
+    $('#siberia').live("click", function () {
+        $('nav .item').removeClass("active").eq(2).addClass("active");
+        $(".page .tab").hide().eq(2).show();
+        $(".footer").hide().eq(2).show();
+    });
+
+    $('#ural').live("click", function () {
+        $('nav .item').removeClass("active").eq(1).addClass("active");
+        $(".page .tab").hide().eq(1).show();
+        $(".footer").hide().eq(1).show();
+    });
+
 
     // big popups
     $('.popup-big').hide();

@@ -19,6 +19,9 @@ $folder) {
 @include font-face("PTsans",
 "pt_sans_regular",
 "PTsans");
+@include font-face("PTserif",
+"pt_serif_regular",
+"PTserif");
 /** General styles **/
 
 html {
@@ -30,7 +33,7 @@ body {
     width: 100%;
     position: relative;
     text-align: center;
-    font-family: 'PTsans', Arial, sans-serif;
+    font-family: 'PTserif', Arial, sans-serif;
 }
 
 .clearfix {
@@ -51,6 +54,8 @@ h3 {
     border-bottom: 1px solid #000;
     display: inline;
     padding: 3px 38px;
+    text-transform: uppercase;
+    font-family: 'PTserif', Arial, sans-serif;
 }
 
 .medal-hero {
@@ -61,6 +66,7 @@ h3 {
     text-align: left;
     font-weight: bold;
     line-height: 10px;
+    font-family: 'PTserif', Arial, sans-serif;
     .icon {
         position: absolute;
         width: 46px;
@@ -74,13 +80,13 @@ h3 {
 .order {
     width: 58px;
     height: 64px;
-    background: url(../img/sprite-main.png) -207px -76px;
+    background: url(../img/sprite-main.png) -207px -74px;
 }
 
 .three-orders {
     width: 172px;
     height: 63px;
-    background: url(../img/sprite-main.png) -267px -76px;
+    background: url(../img/sprite-main.png) -267px -75px;
 }
 
 .text-stars {
@@ -97,8 +103,22 @@ h3 {
     }
 }
 
+.description {
+    position: absolute;
+    font-size: 12px;
+    text-align: left;
+    font-style: italic;
+    line-height: 14px;
+    border-top: 4px solid #ff8b00;
+}
+
+.bold {
+    font-weight: bold;
+}
+
 .popup-big {
     position: absolute;
+    font-family: 'PTsans', Arial, sans-serif;
     width: 825px;
     top: 150px;
     padding-top: 21px;
@@ -140,7 +160,7 @@ h3 {
                 }
                 &.two {
                     left: 218px;
-                    bottom: 132px;
+                    top: 318px;
                     width: 119px;
                     height: 48px;
                     background: url(../img/sprite-main.png) 0px -76px;
@@ -202,16 +222,10 @@ h3 {
                     }
                 }
                 .evacuation {
-                    position: absolute;
                     width: 60px;
                     padding: 8px 0 0 40px;
                     top: 200px;
-                    font-size: 12px;
-                    text-align: left;
-                    font-style: italic;
-                    line-height: 13px;
                     left: 301px;
-                    border-top: 4px solid #ff8b00;
                 }
             }
             .right {
@@ -241,8 +255,8 @@ h3 {
                         font-weight: bold;
                         font-size: 36px;
                         display: block;
-                        margin-bottom: 5px;
                         margin-bottom: 11px;
+                        font-family: 'PTserif', Arial, sans-serif;
                     }
                 }
             }
@@ -272,16 +286,10 @@ h3 {
                 }
             }
             .recovery {
-                position: absolute;
                 width: 125px;
                 padding: 8px 66px 0 0px;
                 top: 305px;
-                font-size: 12px;
-                text-align: left;
-                font-style: italic;
-                line-height: 14px;
                 left: 133px;
-                border-top: 4px solid #ff8b00;
             }
         }
     }
@@ -333,7 +341,7 @@ h3 {
             &.last {
                 text-align: left;
             }
-            &.hovered {
+            &:hover {
                 color: #F58A1F;
             }
             &.active {
@@ -344,7 +352,6 @@ h3 {
         }
     }
     .map {
-        border-top: 3px solid #ff8b00;
         position: relative;
         height: 253px;
         background: url(../img/map-bg.jpg) no-repeat;
@@ -353,13 +360,14 @@ h3 {
         .item {
             position: absolute;
             line-height: 0;
+            font-family: 'PTsans', Arial, sans-serif;
             &.position1 {
                 top: 9px;
                 left: 252px;
                 .popup-title {
                     width: 94px;
                     background: url(../img/sprite-main.png) 0 0;
-                    &.hovered {
+                    &:hover {
                         background: url(../img/sprite-main.png) -94px 0;
                         width: 95px;
                     }
@@ -375,7 +383,7 @@ h3 {
                 .popup-title {
                     background: url(../img/sprite-main.png) -1px -16px;
                     width: 43px;
-                    &.hovered {
+                    &:hover {
                         background: url(../img/sprite-main.png) -43px -16px;
                     }
                     &.active {
@@ -389,7 +397,7 @@ h3 {
                 .popup-title {
                     background: url(../img/sprite-main.png) -129px -16px;
                     width: 88px;
-                    &.hovered {
+                    &:hover {
                         background: url(../img/sprite-main.png) -306px -16px;
                     }
                     &.active {
@@ -403,7 +411,7 @@ h3 {
                 .popup-title {
                     width: 63px;
                     background: url(../img/sprite-main.png) -285px 0;
-                    &.hovered {
+                    &:hover {
                         background: url(../img/sprite-main.png) -412px 0;
                     }
                     &.active {
@@ -417,7 +425,7 @@ h3 {
                 .popup-title {
                     width: 107px;
                     background: url(../img/sprite-main.png) -394px -16px;
-                    &.hovered {
+                    &:hover {
                         background: url(../img/sprite-main.png) -502px -16px;
                     }
                 }
@@ -428,7 +436,7 @@ h3 {
                 .popup-title {
                     width: 76px;
                     background: url(../img/sprite-main.png) -475px 0;
-                    &.hovered {
+                    &:hover {
                         background: url(../img/sprite-main.png) -552px 0;
                     }
                 }
@@ -463,15 +471,6 @@ h3 {
                 .text-circle {
                     height: 15px;
                 }
-                span {
-                    color: #ff8c00;
-                    a {
-                        display: block;
-                        color: #ff8c00;
-                        margin-bottom: 5px;
-                        font-size: 14px;
-                    }
-                }
                 .close {
                     position: absolute;
                     right: -4px;
@@ -482,7 +481,7 @@ h3 {
                     background: url(../img/sprite-main.png) 0 -32px;
                     @include border-radius(50%);
                     behavior: url(/pie/PIE.php);
-                    &.hovered {
+                    &:hover {
                         background: url(../img/sprite-main.png) -16px -32px;
                     }
                 }
@@ -535,6 +534,427 @@ h3 {
                         bottom: -39px;
                     }
                 }
+                .title {
+                    font-family: 'PTserif', Arial, sans-serif;
+                    color: #ff8c00;
+                    margin-bottom: 5px;
+                    font-size: 14px;
+                    display: inline;
+                    cursor: pointer;
+                    text-decoration: underline;
+                }
+                .color {
+                    color: #ff8c00;
+                }
+            }
+        }
+    }
+    .tab {
+        border-top: 3px solid #ff8b00;
+        font-family: 'PTsans', Arial, sans-serif;
+        &.ural {
+            padding: 31px 22px 46px;
+            .title {
+                margin: 22px 0 17px;
+            }
+            .tab-title {
+                margin-top: 25px;
+            }
+            h3 {
+                padding: 0px 38px;
+                margin-bottom: 24px;
+            }
+            h4 {
+                font-size: 18px;
+                font-weight: bold;
+                border-bottom: 1px solid #ff8b00;
+                padding: 0 14px 5px;
+                display: inline;
+            }
+            .line {
+                position: relative;
+                .left {
+                    float: left;
+                }
+                .right {
+                    float: right;
+                }
+                &.operation {
+                    margin: 17px 0 28px;
+                    .left {
+                        width: 135px;
+                        margin: 40px 0 0 8px;
+                    }
+                    .right {
+                        width: 775px;
+                    }
+                    .plant-icon {
+                        width: 121px;
+                        height: 71px;
+                        background: url(../img/sprite-main.png) -221px -139px;
+                        margin-bottom: 15px;
+                    }
+                    .description {
+                        width: 130px;
+                        top: 310px;
+                        left: 0px;
+                        padding: 7px 84px 0 0;
+                    }
+                }
+                &.meeting {
+                    margin-bottom: 32px;
+                    .left {
+                        width: 560px;
+                    }
+                    .right {
+                        width: 200px;
+                        margin: 3px 81px 0 0;
+                        .blast-furnace-icon {
+                            width: 99px;
+                            height: 118px;
+                            margin: 0 auto;
+                            background: url(../img/sprite-main.png) 0 -139px;
+                            margin-bottom: 15px;
+                        }
+                    }
+                    .description {
+                        width: 175px;
+                        bottom: 7px;
+                        right: 188px;
+                        padding: 7px 2px 0 89px;
+                    }
+                }
+                .text {
+                    font-size: 14px;
+                    line-height: 17px;
+                }
+                &.production {
+                    margin-top: 40px;
+                    .description {
+                        padding: 8px 115px 0 0;
+                        top: 21px;
+                        left: 481px;
+                        width: 100px;
+                    }
+                    .tank {
+                        width: 760px;
+                        height: 397px;
+                        position: absolute;
+                        z-index: 1;
+                        top: 98px;
+                        left: -24px;
+                        background: url(../img/t-34.png) no-repeat;
+                    }
+                    .text {
+                        position: absolute;
+                        font-size: 12px;
+                        line-height: 15px;
+                        &.position1 {
+                            top: 84px;
+                            left: -5px;
+                            width: 200px;
+                            .title-t34 {
+                                padding-bottom: 7px;
+                                display: inline-block;
+                                font-size: 24px;
+                                color: #F58A1F;
+                                font-weight: bold;
+                            }
+                        }
+                        &.position2 {
+                            top: 49px;
+                            left: 226px;
+                            width: 190px;
+                        }
+                        &.position3 {
+                            top: 114px;
+                            left: 410px;
+                            width: 145px;
+                        }
+                    }
+                    .lable {
+                        position: absolute;
+                        bottom: -60px;
+                        left: -6px;
+                        width: 158px;
+                        padding: 33px 0;
+                        background: url(../img/about-t34.png) no-repeat;
+                        z-index: 2;
+                        .number {
+                            font-size: 36px;
+                            font-weight: bold;
+                            font-family: 'PTserif', Arial, sans-serif;
+                        }
+                        .armor {
+                            font-weight: bold;
+                            font-size: 16px;
+                            font-family: 'PTserif', Arial, sans-serif;
+                        }
+                        .produced {
+                            font-size: 12px;
+                        }
+                    }
+                }
+                &.ammunition {
+                    margin: 41px 0 20px;
+                    .left {
+                        margin-top: 50px;
+                    }
+                    .right {
+                        width: 362px;
+                        .ammo {
+                            background: url(../img/ammo.png) no-repeat;
+                            font-size: 12px;
+                            width: 120px;
+                            margin-left: 19px;
+                            padding: 0 121px 175px 102px;
+                            line-height: 15px;
+                            background-position: left bottom;
+                            span {
+                                color: #F58A1F;
+                                font-weight: bold;
+                            }
+                            .numb {
+                                font-size: 24px;
+                                line-height: 17px;
+                            }
+                        }
+                        .medicines {
+                            margin-top: 81px;
+                            padding-top: 147px;
+                            font-size: 12px;
+                            line-height: 14px;
+                            background: url(../img/medicines.png) no-repeat;
+                            background-position: 117px 0;
+                        }
+                    }
+                    .description {
+                        bottom: 212px;
+                        right: 173px;
+                        width: 170px;
+                        padding: 6px 13px 0 68px;
+                    }
+                }
+                &.feat {
+                    margin-bottom: 58px;
+                    height: auto;
+                    .item {
+                        float: left;
+                        margin-top: 32px;
+                        font-size: 14px;
+                        line-height: 16px;
+                        .color {
+                            color: #F58A1F;
+                        }
+                        .icon {
+                            margin: 0 auto 7px;
+                        }
+                        &.women {
+                            width: 230px;
+                            .icon {
+                                width: 101px;
+                                height: 63px;
+                                background: url(../img/sprite-main.png) -99px -208px;
+                            }
+                        }
+                        &.steelworkers {
+                            width: 205px;
+                            margin: 44px 0 0 17px;
+                        }
+                        &.plant {
+                            width: 191px;
+                            margin-left: 40px;
+                            .icon {
+                                width: 120px;
+                                height: 69px;
+                                background: url(../img/sprite-main.png) -100px -139px;
+                            }
+                        }
+                        &.labor {
+                            width: 220px;
+                            margin-left: 33px;
+                            .icon {
+                                width: 71px;
+                                height: 71px;
+                                background: url(../img/sprite-main.png) -344px -139px;
+                            }
+                        }
+                    }
+                }
+                &.front {
+                    margin-top: 16px;
+                    height: 428px;
+                    .title {
+                        font-size: 14px;
+                        line-height: 17px;
+                        width: 418px;
+                        margin: 0 auto 30px;
+                    }
+                    img {
+                        display: block;
+                        float: left;
+                        &.komsomol {
+                            width: 374px;
+                        }
+                        &.select {
+                            width: 340px;
+                            margin-left: 26px;
+                        }
+                    }
+                    .picture {
+                        position: absolute;
+                        top: 170px;
+                        right: 45px;
+                        border: 3px solid #fff;
+                    }
+                    .description {
+                        &.one {
+                            width: 157px;
+                            top: 337px;
+                            padding-top: 10px;
+                            left: 401px;
+                        }
+                        &.two {
+                            width: 190px;
+                            top: 337px;
+                            left: 0px;
+                            padding-top: 10px;
+                        }
+                        &.three {
+                            border-top: none;
+                            top: 63px;
+                            right: 0;
+                            width: 144px;
+                            padding-bottom: 0 18px 5px 0;
+                            border-bottom: 4px solid #ff8b00;
+                        }
+                    }
+                }
+                &.conclusion {
+                    width: 468px;
+                    margin: 0 auto;
+                    .title {
+                        border-top: 1px solid #000;
+                        border-bottom: 1px solid #000;
+                        padding: 12px 0 17px;
+                        font-size: 14px;
+                        line-height: 17px;
+                        margin: 0;
+                    }
+                    .left,
+                    .right {
+                        text-align: center;
+                        font-size: 14px;
+                        margin-top: 15px;
+                        .number {
+                            font-family: 'PTserif', Arial, sans-serif;
+                            font-size: 60px;
+                            font-weight: bold;
+                        }
+                        .text {
+                            font-size: 14px;
+                            line-height: 17px;
+                            margin-top: 2px;
+                        }
+                    }
+                    .left {
+                        float: left;
+                        width: 160px;
+                        color: #F18700;
+                        margin-left: 30px;
+                    }
+                    .right {
+                        float: right;
+                        width: 125px;
+                        margin-right: 66px;
+                    }
+                }
+                .decoration {
+                    width: 146px;
+                    height: 28px;
+                    position: absolute;
+                    top: 141px;
+                    left: 210px;
+                    background: url(../img/sprite-main.png) -386px -34px;
+                }
+            }
+            .production-conclusion {
+                border-top: 3px solid #ff8b00;
+                position: relative;
+                padding-top: 11px;
+                font-size: 13px;
+                line-height: 16px;
+                margin-bottom: 64px;
+                .line {
+                    position: absolute;
+                    width: 2px;
+                    height: 9px;
+                    background: #ff8b00;
+                    &.position1 {
+                        right: 0;
+                        top: -11px;
+                    }
+                    &.position2 {
+                        left: 0;
+                        top: -11px;
+                    }
+                    &.position3 {
+                        margin-left: -1px;
+                        left: 50%;
+                        top: 0;
+                    }
+                }
+                .data {
+                    margin: 19px 0 20px 360px;
+                    .wrap {
+                        margin-bottom: 16px;
+                        padding: 6px 0 6px 8px;
+                        position: relative;
+                        .line-bg {
+                            height: 30px;
+                            float: left;
+                            background: #57595b;
+                            text-align: left;
+                        }
+                        .icon {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 43px;
+                            height: 43px;
+                        }
+                        &.cast-iron {
+                            .line-bg {
+                                width: 182px;
+                            }
+                            .icon {
+                                background: url(../img/sprite-main.png) -251px -32px;
+                            }
+                        }
+                        &.steel {
+                            .line-bg {
+                                width: 60px;
+                            }
+                            .icon {
+                                background: url(../img/sprite-main.png) -296px -32px;
+                            }
+                        }
+                        &.rental {
+                            .line-bg {
+                                width: 46px;
+                            }
+                            .icon {
+                                background: url(../img/sprite-main.png) -341px -32px;
+                            }
+                        }
+                        .text {
+                            display: inline;
+                            margin: 5px 0 0 12px;
+                            float: left;
+                            font-size: 18px;
+                        }
+                    }
+                }
             }
         }
     }
@@ -548,24 +968,13 @@ h3 {
     .footer {
         margin: 0 auto;
         width: 936px;
-        _width: 980px;
         padding: 0 22px;
-        .bold {
-            font-weight: bold;
-        }
-        .left,
-        .right {
+        .left, .right {
             width: 455px;
             .title {
                 font-size: 14px;
                 margin-bottom: 10px;
                 font-weight: bold;
-            }
-            .line {
-                height: 3px;
-                background: #ffaf00;
-                border-top: 2px solid #231F20;
-                border-bottom: 1px solid #231F20;
             }
             .item {
                 float: left;
@@ -573,6 +982,7 @@ h3 {
                 text-align: center;
                 font-size: 10px;
                 line-height: 12px;
+                font-family: 'PTsans', Arial, sans-serif;
                 &.first {
                     margin-left: 0;
                 }
@@ -607,10 +1017,35 @@ h3 {
             width: 300px;
             clear: both;
             text-align: left;
-            margin-top: 28px;
+            margin-top: 6px;
             font-style: italic;
             font-size: 10px;
             color: #242021;
+        }
+        &.ural,
+        &.siberia {
+            width: 455px;
+            margin: 0 auto;
+            .left, .right {
+                float: none;
+                .title {
+                    font-family: 'PTsans', Arial, sans-serif;
+                    font-size: 18px;
+                    margin: 10px 0 6px;
+                }
+            }
+            .bottom-text {
+                margin-top: 21px;
+            }
+        }
+        &.siberia {
+            margin-bottom: 15px;
+        }
+        .line {
+            height: 3px;
+            background: #ffaf00;
+            border-top: 2px solid #231F20;
+            border-bottom: 1px solid #231F20;
         }
     }
 }
