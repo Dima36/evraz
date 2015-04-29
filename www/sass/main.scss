@@ -99,7 +99,7 @@ h3 {
     position: relative;
     height: 24px;
     .icon {
-        background: url(../img/sprite-main.png) -213px -32px;
+        background: url(../img/sprite-main.png) -213px 0;
         width: 38px;
         height: 7px;
         position: absolute;
@@ -187,7 +187,7 @@ h3 {
                     background: url(../img/sprite-main.png) 0 -17px;
                 }
                 &.two {
-                    left: 218px;
+                    left: 213px;
                     top: 318px;
                     width: 119px;
                     height: 48px;
@@ -195,9 +195,9 @@ h3 {
                 }
             }
             .left {
-                width: 205px;
+                width: 218px;
                 float: left;
-                margin: 30px 13px 0 47px;
+                margin: 30px 22px 0 25px;
                 font-size: 14px;
                 line-height: 17px;
                 .text-arrow {
@@ -234,7 +234,7 @@ h3 {
                 margin-top: 32px;
                 position: relative;
                 img {
-                    margin-bottom: 36px;
+                    margin-bottom: 34px;
                 }
                 h4 {
                     font-size: 14px;
@@ -243,7 +243,6 @@ h3 {
                 }
                 ul {
                     font-size: 14px;
-                    margin-top: 2px;
                     line-height: 16px;
                     span {
                         color: #ff8019;
@@ -257,9 +256,9 @@ h3 {
                 }
             }
             .right {
-                width: 169px;
+                width: 200px;
                 float: left;
-                margin: 32px 0 0 26px;
+                margin: 32px 0 0 8px;
                 font-size: 13px;
                 line-height: 17px;
                 .target {
@@ -270,7 +269,7 @@ h3 {
                     margin: 0 auto 10px;
                 }
                 .statistics {
-                    margin-top: 96px;
+                    margin-top: 98px;
                     color: #231F20;
                     font-size: 14px;
                     .lost {
@@ -579,7 +578,7 @@ h3 {
                 &.operation {
                     margin: 17px 0 28px;
                     .left {
-                        width: 135px;
+                        width: 121px;
                         margin: 40px 0 0 8px;
                     }
                     .right {
@@ -728,8 +727,8 @@ h3 {
                     .description {
                         bottom: 212px;
                         right: 173px;
-                        width: 170px;
-                        padding: 6px 13px 0 68px;
+                        width: 180px;
+                        padding: 6px 13px 0 58px;
                     }
                 }
                 &.feat {
@@ -768,8 +767,8 @@ h3 {
                             }
                         }
                         &.labor {
-                            width: 220px;
-                            margin-left: 33px;
+                            width: 235px;
+                            margin-left: 18px;
                             .icon {
                                 width: 71px;
                                 height: 71px;
@@ -825,7 +824,7 @@ h3 {
                             top: 63px;
                             right: 0;
                             width: 144px;
-                            padding-bottom: 0 18px 5px 0;
+                            padding: 0 18px 5px 0;
                             border-bottom: 4px solid #ff8b00;
                         }
                     }
@@ -888,15 +887,15 @@ h3 {
                 .line {
                     position: absolute;
                     width: 2px;
-                    height: 9px;
+                    height: 6px;
                     background: #ff8b00;
                     &.position1 {
                         right: 0;
-                        top: -11px;
+                        top: -8px;
                     }
                     &.position2 {
                         left: 0;
-                        top: -11px;
+                        top: -8px;
                     }
                     &.position3 {
                         margin-left: -1px;
@@ -1378,6 +1377,7 @@ h3 {
                     }
                     &.last {
                         margin-top: 23px;
+                        padding: 0 22px 29px;
                         .text-middle {
                             margin: 16px 0 21px;
                         }
@@ -1576,9 +1576,17 @@ h3 {
                                     top: -15px;
                                 }
                             }
+                            .decoration {
+                                position: absolute;
+                                width: 108px;
+                                height: 47px;
+                                top: 92px;
+                                left: 163px;
+                                background: url(../img/sprite-main.png) 0px -353px;
+                            }
                         }
                         .front-needs {
-                            height: 842px;
+                            height: 901px;
                             .bg {
                                 background: url(../img/needs-bg.png) no-repeat;
                                 top: 37px;
@@ -1586,11 +1594,12 @@ h3 {
                                 height: 827px;
                                 left: -80px;
                                 position: absolute;
-                                z-index: -1;
+                                z-index: -3;
                             }
                             .text-block {
                                 font-size: 12px;
                                 position: absolute;
+                                z-index: 2;
                                 .title {
                                     font-size: 24px;
                                     line-height: 29px;
@@ -1619,8 +1628,8 @@ h3 {
                                 }
                                 &.position3 {
                                     top: 76px;
-                                    right: 276px;
-                                    width: 170px;
+                                    right: 265px;
+                                    width: 190px;
                                     .icon {
                                         width: 82px;
                                         height: 15px;
@@ -1674,9 +1683,209 @@ h3 {
                                 }
                                 &.position11 {
                                     top: 249px;
-                                    right: 24px;
-                                    width: 200px;
+                                    right: 5px;
+                                    width: 210px;
                                 }
+                            }
+                        }
+                        .labor-feat {
+                            margin-top: 34px;
+                            font-size: 14px;
+                            line-height: 17px;
+                            .left {
+                                width: 200px;
+                                float: left;
+                                margin: 0 25px 0 15px;
+                                .women {
+                                    .icon {
+                                        width: 155px;
+                                        margin: 0 auto 11px;
+                                        height: 96px;
+                                        background: url(../img/women1.png);
+                                    }
+                                }
+                                .male-profession {
+                                    margin-top: 20px;
+                                    .top {
+                                        position: relative;
+                                        width: 200px;
+                                        height: 97px;
+                                        .year {
+                                            position: absolute;
+                                            color: #565655;
+                                            font-size: 12px;
+                                            top: 66px;
+                                            &.one {
+                                                right: 40px;
+                                            }
+                                            &.two {
+                                                left: 37px;
+                                            }
+                                        }
+                                        .percent {
+                                            position: absolute;
+                                            color: #565655;
+                                            font-size: 12px;
+                                            top: 5px;
+                                            left: 96px;
+                                        }
+                                        .icon {
+                                            background: url(../img/sprite-main.png) -239px -283px;
+                                            margin: 28px auto 10px;
+                                            width: 159px;
+                                            height: 61px;
+                                        }
+                                    }
+                                }
+                            }
+                            img {
+                                float: left;
+                            }
+                            .right {
+                                position: absolute;
+                                top: 0;
+                                right: -21px;
+                                width: 345px;
+                                img {
+                                    float: right;
+                                }
+                                .text {
+                                    margin-bottom: 13px;
+                                }
+                            }
+                            .acceleration {
+                                position: absolute;
+                                top: 309px;
+                                right: -38px;
+                                font-size: 12px;
+                                color: #F58A1F;
+                                font-style: italic;
+                                line-height: 14px;
+                                width: 280px;
+                                text-align: left;
+                                .icon {
+                                    width: 71px;
+                                    height: 71px;
+                                    margin-right: 10px;
+                                    float: left;
+                                    background: url(../img/sprite-main.png) -399px -283px;
+                                }
+                            }
+                            .description.one {
+                                top: 254px;
+                                right: -21px;
+                                padding: 8px 13px 0 20px;
+                            }
+                            .description.two {
+                                top: 409px;
+                                right: 78px;
+                                width: 200px;
+                                padding: 8px 19px 0 74px;
+                            }
+                            .decoration {
+                                position: absolute;
+                                width: 43px;
+                                height: 112px;
+                                top: 237px;
+                                right: 245px;
+                                background: url(../img/sprite-main.png) -472px -283px;
+                            }
+                        }
+                        .boost {
+                            margin: 72px 0 40px;
+                            .left {
+                                float: left;
+                                width: 498px;
+                                img {
+                                    float: right;
+                                }
+                                .text {
+                                    width: 134px;
+                                    float: right;
+                                    font-size: 14px;
+                                    margin: 0px 22px 0 0;
+                                    line-height: 16px;
+                                    .icon {
+                                        width: 60px;
+                                        height: 60px;
+                                        margin: 0 auto 10px;
+                                        background: url(../img/sprite-main.png) -178px -283px;
+                                    }
+                                }
+                            }
+                            .right {
+                                float: right;
+                                width: 400px;
+                                img {
+                                    float: left;
+                                }
+                            }
+                            .text-right {
+                                font-size: 12px;
+                                font-style: italic;
+                                width: 200px;
+                                position: absolute;
+                                top: 48px;
+                                right: -44px;
+                                line-height: 15px;
+                                color: #F58A1F;
+                            }
+                            .employees {
+                                position: absolute;
+                                top: -40px;
+                                left: -19px;
+                                width: 173px;
+                                .icon {
+                                    width: 173px;
+                                    height: 99px;
+                                    margin: 0 auto 13px;
+                                    background: url(../img/women2.png);
+                                }
+                            }
+                            .description.one {
+                                padding: 11px 30px 0 18px;
+                                top: 166px;
+                                left: 161px;
+                                width: 156px;
+                            }
+                            .description.two {
+                                top: 221px;
+                                right: 56px;
+                                width: 61px;
+                                padding: 5px 20px 0 80px;
+                            }
+                            .decoration {
+                                position: absolute;
+                                width: 113px;
+                                height: 54px;
+                                top: 137px;
+                                right: 53px;
+                                background: url(../img/sprite-main.png) -517px -283px;
+                            }
+                        }
+                        .statistics-front {
+                            width: 401px;
+                            margin: 30px auto 0;
+                            .left, .right {
+                                .number {
+                                    font-size: 60px;
+                                    font-weight: bold;
+                                    font-family: 'PTserif', Arial, sans-serif;
+                                    margin-bottom: 4px;
+                                }
+                                .text {
+                                    line-height: 18px;
+                                    font-size: 14px;
+                                }
+                            }
+                            .left {
+                                float: left;
+                                color: #F58A1F;
+                                width: 180px;
+                            }
+                            .right {
+                                float: right;
+                                width: 162px;
                             }
                         }
                     }
@@ -1704,7 +1913,7 @@ h3 {
             }
             .item {
                 float: left;
-                margin-left: 25px;
+                margin-left: 10px;
                 text-align: center;
                 font-size: 10px;
                 line-height: 12px;
@@ -1717,22 +1926,22 @@ h3 {
         .left {
             float: left;
             .medal-hero {
-                margin: 10px 0 15px 38px;
+                margin: 10px 0 15px 41px;
             }
             .order {
-                margin: 13px 0 8px 40px;
+                margin: 13px auto 8px;
             }
             .item {
-                width: 135px;
+                width: 145px;
             }
         }
         .right {
             float: right;
             .medal-hero {
-                margin: 10px 0 15px 71px;
+                margin: 10px 0 15px 73px;
             }
             .item {
-                width: 215px;
+                width: 222px;
             }
             .three-orders {
                 margin: 13px 0 9px 24px;
