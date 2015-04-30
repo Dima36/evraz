@@ -331,10 +331,19 @@ h3 {
     header {
         border-top: 4px solid #000;
         padding-top: 24px;
+        position: relative;
         .logo {
             display: block;
             width: 473px;
             margin: 0 auto;
+        }
+        .evraz-logo {
+            width: 129px;
+            height: 21px;
+            position: absolute;
+            top: 25px;
+            left: 0px;
+            background: url(../img/evraz-logo.png) no-repeat;
         }
     }
     nav {
